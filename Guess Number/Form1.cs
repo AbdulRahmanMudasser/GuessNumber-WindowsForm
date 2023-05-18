@@ -6,15 +6,18 @@ namespace Guess_Number
     public partial class Form1 : Form
     {
         private int randomNumber;
+        // give the user five attempts
         private int remainingAttempts = 5;
 
         public Form1()
         {
             InitializeComponent();
+            // calling method in form's load event
             GenerateRandomNumber();
             Text = "Guess Number";
         }
 
+        // method that generates a random number between 1 and 10
         private void GenerateRandomNumber()
         {
             Random random = new Random();
